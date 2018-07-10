@@ -1,7 +1,7 @@
 from discord import Game
 from discord.ext.commands import Bot
 
-BOT_PREFIX = ""
+BOT_PREFIX = "?"
 TOKEN = ""
 
 cleint - Bot(command_prefix=BOT_PREFIX)
