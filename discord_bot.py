@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 BOT_PREFIX = "?"
 TOKEN = ""
 
-cleint - Bot(command_prefix=BOT_PREFIX)
+client = Bot(command_prefix=BOT_PREFIX)
 
 @client.event
 async def on_ready():
@@ -15,3 +15,15 @@ async def on_ready():
                 description='greets the person who mention the bot',)
 async def greet(context):
     await client.say("Hello " + context.message.author.mention, + ":wave:")
+
+@client.command(name='changeWord', description='capitalises every second letter')
+async def changeWord(ctx, arg)
+    newword = ""
+    count = 0
+    for w in arg:
+        if count % 2 != 0:
+            newword += w.upper()
+        else:
+            newword += w 
+        count += 1
+    await ctx.send(newword)
