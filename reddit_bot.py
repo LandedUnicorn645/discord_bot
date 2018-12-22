@@ -4,7 +4,7 @@ import praw
 
 
 BOT_PREFIX = "!"
-TOKEN = "NTI1NzE5NDU3MTkzMjYzMTE0.Dv7hcg.yUUTBPFZKpdQrfVKnR5Fk-2-X2U"
+TOKEN = ""
 
 client = Bot(command_prefix=BOT_PREFIX)
 
@@ -16,7 +16,7 @@ async def on_ready():
 @client.command(name="searchred",description='searchs reddit for subredits based on user input')
 async def searchred(t, c, l):
     try:
-        reddit = praw.Reddit(client_id ="fuBC5Y6gFB2UJQ", client_secret="75JGu6vAiSS6Fa8XDok4eKHx5lw", username="LandedUnicorn",password="MAsseff3ct!",user_agent="pdiscordbotv1")
+        reddit = praw.Reddit(client_id ="", client_secret="", username="",password="",user_agent="pdiscordbotv1")
     except:
         client.say("Cannont connect to reddit at the moment, try again later?")
     
